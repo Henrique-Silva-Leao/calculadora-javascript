@@ -1,37 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Simples</title>
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: grey;">
-    
-<div style="margin-top: auto; border: 2px solid #000000; width: 135px;">
-   <input id="input" type="text" value="" disabled style="width: 125px;">
-    <br>
-    <button id="btn7" style="width: 30px; height: 30px;">7</button>
-    <button id="btn8" style="width: 30px; height: 30px;">8</button>
-    <button id="btn9" style="width: 30px; height: 30px;">9</button>
-    <button id="btnsom" style="width: 30px; height: 30px;">+</button>
-     <br>
-    <button id="btn4" style="width: 30px; height: 30px;">4</button>
-    <button id="btn5" style="width: 30px; height: 30px;">5</button>
-    <button id="btn6" style="width: 30px; height: 30px;">6</button>
-    <button id="btnsub" style="width: 30px; height: 30px;">-</button>
-    <br>
-    <button id="btn1" style="width: 30px; height: 30px;">1</button>
-    <button id="btn2" style="width: 30px; height: 30px;">2</button>
-    <button id="btn3" style="width: 30px; height: 30px;">3</button>
-    <button id="btndiv" style="width: 30px; height: 30px;">/</button>
-    <br>
-    <button id="btnvrg" style="width: 30px; height: 30px;">,</button>
-    <button id="btn0" style="width: 30px; height: 30px;">0</button>
-    <button id="btnigual" style="width: 30px; height: 30px;">=</button>
-    <button id="btnmult" style="width: 30px; height: 30px;">*</button>
-</div>
+<body>
 
-<script src="script.js"></script>
+    <div class="calculadora-grid">
+        <div class="display">
+            <input id="input" type="text" disabled>
+        </div>
+
+        <button id="btnClear" class="btn">C</button>
+        <button id="btnClearEntry" class="btn">CE</button>
+        <button id="btndiv" class="btn operador">/</button>
+        <button id="btnmult" class="btn operador">*</button>
+
+        <button id="btn7" class="btn">7</button>
+        <button id="btn8" class="btn">8</button>
+        <button id="btn9" class="btn">9</button>
+        <button id="btnsub" class="btn operador">-</button>
+        
+        <button id="btn4" class="btn">4</button>
+        <button id="btn5" class="btn">5</button>
+        <button id="btn6" class="btn">6</button>
+        <button id="btnsom" class="btn operador">+</button>
+
+        <button id="btn1" class="btn">1</button>
+        <button id="btn2" class="btn">2</button>
+        <button id="btn3" class="btn">3</button>
+        <button id="btnigual" class="btn igual">=</button> 
+        <button id="btn0" class="btn span-dois">0</button> 
+        <button id="btnVirgula" class="btn">,</button>
+    </div>
+
 </body>
-
+<script src="script.js"></script>
 </html>
