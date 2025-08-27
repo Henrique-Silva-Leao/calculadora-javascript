@@ -3,6 +3,7 @@ let n1 = 1 ; let n2 = 2 ;let n3 = 3 ; let n4 = 4; let n5 = 5
 let n6 = 6 ; let n7 = 7 ; let n8 = 8 ; let n9 = 9; let n0 = 0
 let nrest = 0
 let nmemoria1 = 0
+let nmemoria2 = 0
 let resultado = 0
 let indOp = 0
 let input = document.getElementById('input')
@@ -11,6 +12,7 @@ const btn4 = document.getElementById('btn4'); const btn5 = document.getElementBy
 const btn7 = document.getElementById('btn7'); const btn8 = document.getElementById('btn8'); const btn9 = document.getElementById('btn9'); const btn0 = document.getElementById('btn0')
 const btnsom = document.getElementById('btnsom'); const btnsub = document.getElementById('btnsub'); const btndiv = document.getElementById('btndiv');
 const btnvrg = document.getElementById('btnvrg'); const btnigual = document.getElementById('btnigual'); const btnmult = document.getElementById('btnmult')
+const btnClear = document.getElementById('btnClear'); const btnClearResult = document.getElementById('btnClearResult')
 
 // DEFININDO VALOR INCIAL DA CALCULADORA
 input.value = (nrest)
@@ -36,24 +38,50 @@ btnmult.onclick = function() {
     indOp = 4
 };
 
+btnClear.onclick = function() {
+    input.value = nrest
+};
+
+btnClearResult.onclick = function() {
+    nmemoria1 = 0
+    nmemoria2 = 0
+    input.value = 0
+    console.log("Entrando no Botao clear")
+    console.log("resultado:" + resultado)
+    console.log("N na Memoria:" + nmemoria1)
+    console.log("N na Memoria 2:" + nmemoria2)
+    console.log("N na tela:" + input.value)
+};
+
+
+
 btnigual.onclick = function() {
+
+  nmemoria2 = parseInt(input.value)
    if (indOp == 1){
-        resultado = nmemoria1 + parseInt(input.value)
+        resultado = nmemoria1 + nmemoria2
         input.value = resultado
 
    }else if (indOp == 2){
-        resultado = nmemoria1 - parseInt(input.value)
+        resultado = nmemoria1 - nmemoria2
         input.value = resultado
 
    }else if (indOp == 3){
-        resultado = nmemoria1 / parseInt(input.value)
+        resultado = nmemoria1 / nmemoria2
         input.value = resultado
 
    }else if (indOp == 4){
-        resultado = nmemoria1 * parseInt(input.value)
+        resultado = nmemoria1 * nmemoria2
         input.value = resultado
-
    }
+
+  nmemoria1 = 0
+  nmemoria2 = 0
+
+  console.log("resultado:" + resultado)
+  console.log("N na Memoria:" + nmemoria1)
+  console.log("N na Memoria 2:" + nmemoria2)
+  console.log("N na tela:" + input.value)
 };
 
 
